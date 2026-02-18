@@ -1,0 +1,435 @@
+CSW1 ( layer 3)
+basisconfiguratie
+
+enable
+conf t
+no ip domain-lookup
+hostname CSW1
+enable secret cisco
+line vty 0 15
+password cisco
+login
+line con 0
+password cisco
+login
+exit
+service password-encryption
+
+ip domain-name pod1.edu
+crypto key generate rsa general-keys modulus 1024
+username admin secret cisco
+ip ssh version 2
+line vty 0 4
+transport input ssh
+login local
+
+conf t
+vlan 10
+name Data
+vlan 20 
+name WLAN
+vlan 30
+name Voice
+vlan 40
+name server
+Vlan 50
+name Management
+
+config t
+interface vlan 10
+description Default Gateway SVI for 10.101.0.0
+ip address 10.101.0.254 255.255.255.0
+	standby 10 ip
+	standby 10 priority 150
+	standby 10 preempt
+no shut
+exit
+
+interface vlan 20
+description Default Gateway SVI for 10.101.1.0
+ip address 10.101.1.254 255.255.255.0
+	standby 20 ip xx
+	standby 20 priority 150
+	standby 20 preempt
+no shut
+
+interface vlan 30
+description Default Gateway SVI for 10.101.2.0
+ip address 10.101.2.254 255.255.255.0
+	standby 30 ip xx
+	standby 30 priority 150
+	standby 30 preempt
+no shut
+
+interface vlan 40
+description Default Gateway SVI for 10.101.3.0
+ip address 10.101.3.62 255.255.255.192
+	standby 40 ip xx
+	standby 40 priority 150
+	standby 40 preempt
+no shut
+
+interface vlan 50
+description Default Gateway SVI for 10.101.3.64
+ip address 10.101.3.126 255.255.255.192
+	standby 50 ip xx
+	standby 50 priority 150
+	standby 50 preempt
+no shut
+
+interface gigabitethernet 1/0/7
+description Access port to DHCP 1
+switchport mode access
+switchport access vlan 40
+
+interface gigabitethernet 1/0/6
+description Access port to DNS 1
+switchport mode access
+switchport access vlan 40
+
+interface gigabitethernet 1/0/4
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,50
+
+interface gigabitethernet 1/0/3
+description Access port to SW4
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,50
+
+interface gigabitethernet 1/0/1
+description Access port to CSW1
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,50
+
+interface gigabitethernet 1/0/2
+description Access port to CSW1
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,50
+
+	interface gigabitethernet xx
+	description routed Port Link to R1
+	no switchport
+	ip add xxx 255.255.255.252
+	no shut
+
+	exit
+
+	ip routing
+
+	interface range xx
+	channel-group 1 mode active
+	exit
+	interface port-channel 1
+	switchport mode trunk
+	switchport mode dynamic auto
+	switchport trunk allowed vlan 10,20,30,40,50
+
+	spanning-tree vlan 10,20,30,40,50 root primary
+	spanning-tree mode rapid-pvst
+	spanning-tree bpduguard enable
+
+	interface range xx
+	spanning-tree portfast
+
+	ip route 0.0.0.0 0.0.0.0 xx ( ip adress interface router)
+
+CSW2 ( layer 3)
+basisconfiguratie
+
+enable
+conf t
+no ip domain-lookup
+hostname CSW2
+enable secret cisco
+line vty 0 15
+password cisco
+login
+line con 0
+password cisco
+login
+exit
+service password-encryption
+
+ip domain-name pod1.edu
+crypto key generate rsa general-keys modulus 1024
+username admin secret cisco
+ip ssh version 2
+line vty 0 4
+transport input ssh
+login local
+
+conf t
+vlan 10
+name Data
+vlan 20 
+name WLAN
+vlan 30
+name Voice
+vlan 40
+name server
+Vlan 50
+name Management
+
+interface vlan 10
+description Default Gateway SVI for 10.101.0.0
+ip address 10.101.0.254 255.255.255.0
+	standby 10 ip
+	standby 10 priority 150
+	standby 10 preempt
+no shut
+exit
+
+interface vlan 20
+description Default Gateway SVI for 10.101.1.0
+ip address 10.101.1.254 255.255.255.0
+	standby 20 ip xx
+	standby 20 priority 150
+	standby 20 preempt
+no shut
+
+interface vlan 30
+description Default Gateway SVI for 10.101.2.0
+ip address 10.101.2.254 255.255.255.0
+	standby 30 ip xx
+	standby 30 priority 150
+	standby 30 preempt
+no shut
+
+interface vlan 40
+description Default Gateway SVI for 10.101.3.0
+ip address 10.101.3.62 255.255.255.192
+	standby 40 ip xx
+	standby 40 priority 150
+	standby 40 preempt
+no shut
+
+interface vlan 50
+description Default Gateway SVI for 10.101.3.64
+ip address 10.101.3.126 255.255.255.192
+	standby 50 ip xx
+	standby 50 priority 150
+	standby 50 preempt
+no shut
+
+interface gigabitethernet 1/0/7
+description Access port to DHCP 2
+switchport mode access
+switchport access vlan 40
+
+interface gigabitethernet 1/0/6
+description Access port to DNS 2
+switchport mode access
+switchport access vlan 40
+
+interface gigabitethernet 1/0/4
+description Access port to SW4
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,50
+
+interface gigabitethernet 1/0/3
+description Access port to SW3
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,50
+
+interface gigabitethernet 1/0/1
+description Access port to CSW1
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,50
+
+interface gigabitethernet 1/0/2
+description Access port to CSW1
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,50
+
+	interface gigabitethernet xx
+	description routed Port Link to R1
+	no switchport
+	ip add xxx 255.255.255.252
+	no shut
+
+	exit
+
+	ip routing
+
+	interface range xx
+	channel-group 1 mode active
+	exit
+	interface port-channel 1
+	switchport mode trunk
+	switchport mode dynamic auto
+	switchport trunk allowed vlan 10,20,30,40,50
+
+	spanning-tree vlan 10,20,30,40,50 root secondary
+	spanning-tree mode rapid-pvst
+	spanning-tree bpduguard enable
+
+	ip route 0.0.0.0 0.0.0.0 xx ( ip adress interface router)
+
+SW3 ( Layer 2)
+basisconfiguratie
+
+enable
+conf t
+no ip domain-lookup
+hostname SW3
+enable secret cisco
+line vty 0 15
+password cisco
+login
+line con 0
+password cisco
+login
+exit
+service password-encryption
+
+ip domain-name pod1.edu
+crypto key generate rsa general-keys modulus 1024
+username admin secret cisco
+ip ssh version 2
+line vty 0 4
+transport input ssh
+login local
+
+conf t
+vlan 10
+name Data
+vlan 20 
+name WLAN
+vlan 30
+name Voice
+vlan 40
+name server
+Vlan 50
+name Management
+
+interface Fa0/6
+description link to VLAN 10 
+switchport mode access
+switchport access vlan 10
+exit
+
+interface Fa0/4
+description link to VLAN 20 
+switchport mode access
+switchport access vlan 20
+exit
+
+interface Fa0/5
+description link to VLAN 10
+switchport mode access	
+switchport access vlan 10
+exit
+
+interface Fa0/1
+description link to VLAN 50 
+switchport mode access
+switchport access vlan 50
+exit
+
+interface Fa0/3
+description Access port to CSW2
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,50
+
+
+SW4 ( Layer 2)
+basisconfiguratie
+
+enable
+conf t
+no ip domain-lookup
+hostname SW4
+enable secret cisco
+line vty 0 15
+password cisco
+login
+line con 0
+password cisco
+login
+exit
+service password-encryption
+
+ip domain-name pod1.edu
+crypto key generate rsa general-keys modulus 1024
+username admin secret cisco
+ip ssh version 2
+line vty 0 4
+transport input ssh
+login local
+
+
+vlan 10
+name Data
+vlan 20 
+name WLAN
+vlan 30
+name Voice
+vlan 40
+name server
+Vlan 50
+name Management
+
+interface Fa0/6
+description link to VLAN 10 
+switchport mode access
+switchport access vlan 10
+exit
+
+interface Fa0/4
+description link to VLAN 20 
+switchport mode access
+switchport access vlan 20
+exit
+
+interface Fa0/3
+description Access port to CSW1
+switchport mode trunk
+switchport trunk allowed vlan 10,20,30,40,50
+
+interface Fa0/1
+description link to VLAN 50 
+switchport mode access
+switchport access vlan 50
+exit
+
+
+Router
+Basisconfiguratie
+
+enable
+conf t
+no ip domain-lookup
+hostname Router_1
+enable secret cisco
+line vty 0 15
+password cisco
+login
+line con 0
+password cisco
+login
+exit
+service password-encryption
+
+conf t
+username admin password cisco
+line vty 0 4
+login local
+end
+
+interface xx
+ip address xxx 255.255.255.252
+standby 1 ip xx 
+standby 1 priority 150
+standby 1 preempt
+no shut
+
+interface xx
+ip address xxx 255.255.255.252
+standby 1 ip xx 
+standby 1 priority 100
+no shut
+
