@@ -1,1 +1,1 @@
-# connecting-and-securing-networks
+# CSN project 2026
