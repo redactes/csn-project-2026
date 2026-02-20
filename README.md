@@ -55,18 +55,6 @@ The project is executed in four recurring phases per module:
 
 ---
 
-## 🚀 Getting Started
-To view our progress or replicate the setup:
-
-1. 📥 Clone this repository.  
-2. 📂 Navigate to the `/docs` folder for detailed step-by-step guides.  
-3. 🖧 Open the `.pkt` files in the `/simulations` folder using Cisco Packet Tracer.
-
-> **Note:** This project is part of a collaborative group effort.  
-> Please follow the documentation guidelines when contributing.
-
----
-
 ## 👥 Contributors
 * **Roy Cannaerts**  
 * **Kenchy Schroyen**  
