@@ -1,69 +1,82 @@
-# CSN project 2026
+# CSN Project 2026  
+A redundant, secure, and self-healing enterprise network design.
 
-This repository contains the documentation, simulation files, and configurations for the **Connecting and Securing Networks** course project. The goal is to design and implement a redundant, self-healing network for a fictional company, mirroring real-world enterprise standards.
 
----
+::contentReference[oaicite:0]{index=0}
 
-## Project Overview
-The objective of this project is to integrate various networking techniques into a single, cohesive infrastructure. We focus on building a resilient network that can automatically recover from link or device failures.
 
-The project is executed in four recurring phases per module:
-1. **Preparation:** Research and theoretical design.
-2. **Simulation:** Testing scenarios using **Cisco Packet Tracer**.
-3. **Implementation:** Building the network on physical hardware in the lab.
-4. **Documentation:** Capturing the final state and configurations for reproducibility.
+This repository contains all documentation, simulations, and configurations for the **Connecting and Securing Networks** course project.  
+The goal is to design and implement a **resilient, redundant, and enterprise-grade network** for a fictional company, following modern industry standards.
 
 ---
 
-## Key Features
-* **Redundancy:** Implementing self-healing protocols to ensure high availability.
-* **Scalability:** A modular approach to network growth.
-* **Security:** Applying industry-standard security measures to protect the infrastructure.
-* **Documentation-Driven:** Detailed logs to ensure the network can be rebuilt from scratch.
+## 🚀 Project Overview
+The project brings together multiple networking technologies into one cohesive architecture. At the core of our goal is **resiliency** — the network must continue functioning even when links or hardware fail.
+
+Each module is completed through a 4-phase workflow:
+
+1. **Preparation** — Research & high-level design  
+2. **Simulation** — Testing concepts using Cisco Packet Tracer  
+3. **Implementation** — Deploying the network on physical Cisco hardware  
+4. **Documentation** — Capturing configs, topology, and decisions
 
 ---
 
-## Tools & Technologies
-* **Hardware:** Cisco Switches & Routers (Lab environment).
-* **Simulation:** Cisco Packet Tracer.
-* **Version Control:** Git & GitHub.
-* **Documentation:** Markdown.
+## 🔧 Key Features
+- **Redundancy:** Spanning Tree, EtherChannel, failover routing, and other self-healing mechanisms  
+- **Scalability:** Modular design that can grow with business needs  
+- **Security:** Best-practice hardening, ACLs, segmentation, firewalling  
+- **Fully Documented:** Clear, reproducible configurations and design notes  
+
+
+::contentReference[oaicite:1]{index=1}
+
 
 ---
 
-## Project Structure
-*This section will be updated as the project progresses through different modules.*
+## 🧰 Tools & Technologies
+- **Hardware:** Cisco switches & routers (lab environment)  
+- **Simulation:** Cisco Packet Tracer  
+- **Version Control:** Git + GitHub  
+- **Documentation:** Markdown & diagrams  
+
+---
+
+## 📁 Project Structure
+*Automatically updated as each module progresses.*
 
 | Module | Description | Status |
-| :--- | :--- | :--- |
+|--------|-------------|--------|
 | **Phase 1** | Network Documentation | 🔄 In Progress |
-| **Phase 2** | LAN met Router on a stick | ⏳ Pending |
-| **Phase 3** | Build a LAN network through a collapsed core network for SafeEU. | ⏳ Pending |
-| **Phase 4** | Add static routing to the LAN and WAN. | ⏳ Pending |
-| **Phase 5** | Build a centralized DHCP solution for SafeEU. | ⏳ Pending |
-| **Phase 6** | Build single area OSPF in LAN and WAN. | ⏳ Pending |
-| **Phase 7** | Build WAN | ⏳ Pending |
-| **Phase 8** | Add monitoring, TFTP server and Syslog. | ⏳ Pending |
-| **Phase 9** | Add Firewall | ⏳ Pending |
-| **Phase 10** | Provider connectivity with BGP and NAT. | ⏳ Pending |
-| **Phase 11** | Security through firewall. | ⏳ Pending |
-| **Phase 12** | Add site-to-site VPN. | ⏳ Pending |
-| **Phase 13** | Build connection to the cloud. | ⏳ Pending |
+| **Phase 2** | LAN with Router-on-a-Stick | ⏳ Pending |
+| **Phase 3** | Collapsed Core LAN for SafeEU | ⏳ Pending |
+| **Phase 4** | Static Routing for LAN & WAN | ⏳ Pending |
+| **Phase 5** | Centralized DHCP for SafeEU | ⏳ Pending |
+| **Phase 6** | Single-Area OSPF | ⏳ Pending |
+| **Phase 7** | WAN Build | ⏳ Pending |
+| **Phase 8** | Monitoring, TFTP & Syslog | ⏳ Pending |
+| **Phase 9** | Firewall | ⏳ Pending |
+| **Phase 10** | Provider Connectivity (BGP + NAT) | ⏳ Pending |
+| **Phase 11** | Enhanced Security | ⏳ Pending |
+| **Phase 12** | Site-to-Site VPN | ⏳ Pending |
+| **Phase 13** | Cloud Connectivity | ⏳ Pending |
 
 ---
 
-## Getting Started
-To view our progress or replicate the setup:
-1. Clone this repository.
-2. Navigate to the `/docs` folder for detailed step-by-step guides.
-3. Open the `.pkt` files in the `/simulations` folder using Cisco Packet Tracer.
+## ▶️ Getting Started
+To explore or replicate our setup:
 
-> **Note:** This project is part of a collaborative group effort. Ensure you follow the documentation guidelines when contributing.
+1. Clone the repository  
+2. Open `/docs` for detailed guides & config notes  
+3. Load the `.pkt` files inside `/simulations` using **Cisco Packet Tracer**  
+
+> 💡 **Collaboration Note:**  
+> Please follow the documentation style and commit guidelines when contributing to maintain clarity and consistency.
 
 ---
 
-## Contributors
-* **Roy Cannaerts** - 
-* **Kenchy Schroyen** - 
-* **Christof Clauwaert** - 
-* **Beau Berghmans** - 
+## 👥 Contributors
+- **Roy Cannaerts**  
+- **Kenchy Schroyen**  
+- **Christof Clauwaert**  
+- **Beau Berghmans**
