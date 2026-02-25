@@ -28,12 +28,11 @@ vlan 10
 name Data
 vlan 20 
 name WLAN
-vlan 30
-name Voice
-vlan 40
-name server
-Vlan 50
+Vlan 100
 name Management
+vlan 200
+name server
+
 
 config t
 interface vlan 10
@@ -165,12 +164,10 @@ vlan 10
 name Data
 vlan 20 
 name WLAN
-vlan 30
-name Voice
-vlan 40
-name server
-Vlan 50
+Vlan 100
 name Management
+vlan 200
+name server
 
 interface vlan 10
 description Default Gateway SVI for 10.101.0.0
@@ -299,12 +296,10 @@ vlan 10
 name Data
 vlan 20 
 name WLAN
-vlan 30
-name Voice
-vlan 40
-name server
-Vlan 50
+Vlan 100
 name Management
+vlan 200
+name server
 
 interface Fa0/6
 description link to VLAN 10 
@@ -362,16 +357,15 @@ transport input ssh
 login local
 
 
+conf t
 vlan 10
 name Data
 vlan 20 
 name WLAN
-vlan 30
-name Voice
-vlan 40
-name server
-Vlan 50
+Vlan 100
 name Management
+vlan 200
+name server
 
 interface Fa0/6
 description link to VLAN 10 

@@ -1,0 +1,35 @@
+Router
+Basisconfiguratie
+
+enable
+conf t
+no ip domain-lookup
+hostname Router_1
+enable secret cisco
+line vty 0 15
+password cisco
+login
+line con 0
+password cisco
+login
+exit
+service password-encryption
+
+conf t
+username admin password cisco
+line vty 0 4
+login local
+end
+
+interface xx
+ip address xxx 255.255.255.252
+standby 1 ip xx 
+standby 1 priority 150
+standby 1 preempt
+no shut
+
+interface xx
+ip address xxx 255.255.255.252
+standby 1 ip xx 
+standby 1 priority 100
+no shut
