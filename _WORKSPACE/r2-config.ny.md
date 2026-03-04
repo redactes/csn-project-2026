@@ -31,8 +31,7 @@ username admin secret cisco
 
 ```
 ip domain-name safeus.local
-crypto key generate rsa
- 1024
+crypto key generate rsa 1024
 ip ssh version 2
 ```
 
@@ -47,16 +46,16 @@ ip ssh version 2
 
 ```
 line console 0
- password cisco
- login
+password cisco
+login
 ```
 
 ### VTY Lines (Remote Access)
 
 ```
 line vty 0 4
- login local
- transport input ssh
+login local
+transport input ssh
 ```
 
 - `login local` — Uses the local username/password database (admin/cisco).
@@ -70,8 +69,8 @@ line vty 0 4
 
 ```
 interface g0/0/1
- ip address 10.101.2.226 255.255.255.252
- no shutdown
+ip address 10.101.2.226 255.255.255.252
+no shutdown
 ```
 
 | | Value |
@@ -88,7 +87,7 @@ interface g0/0/1
 
 ```
 interface g0/0/0
- no shutdown
+no shutdown
 ```
 
 The physical interface is brought up with no IP address. Sub-interfaces handle inter-VLAN routing.
@@ -97,8 +96,8 @@ The physical interface is brought up with no IP address. Sub-interfaces handle i
 
 ```
 interface g0/0/0.10
- encapsulation dot1Q 10
- ip address 10.101.10.253 255.255.255.0
+encapsulation dot1Q 10
+ip address 10.101.10.253 255.255.255.0
 ```
 
 | | Value |
@@ -111,8 +110,8 @@ interface g0/0/0.10
 
 ```
 interface g0/0/0.20
- encapsulation dot1Q 20
- ip address 10.101.1.253 255.255.255.0
+encapsulation dot1Q 20
+ip address 10.101.1.253 255.255.255.0
 ```
 
 | | Value |
@@ -125,8 +124,8 @@ interface g0/0/0.20
 
 ```
 interface g0/0/0.100
- encapsulation dot1Q 100
- ip address 10.101.2.125 255.255.255.192
+encapsulation dot1Q 100
+ip address 10.101.2.125 255.255.255.192
 ```
 
 | | Value |
@@ -139,8 +138,8 @@ interface g0/0/0.100
 
 ```
 interface g0/0/0.200
- encapsulation dot1Q 200
- ip address 10.101.2.61 255.255.255.192
+encapsulation dot1Q 200
+ip address 10.101.2.61 255.255.255.192
 ```
 
 | | Value |
@@ -183,50 +182,52 @@ ip route 0.0.0.0 0.0.0.0 10.101.2.225
 
 ## Full Running Configuration
 
-```
-hostname R2
-no ip domain-lookup
+<details><summary>Full Running Configuration</summary>
 
-enable secret cisco
-username admin secret cisco
+    hostname R2
+    no ip domain-lookup
 
-ip domain-name safeus.local
-crypto key generate rsa
- 1024
-ip ssh version 2
+    enable secret cisco
+    username admin secret cisco
 
-line console 0
- password cisco
- login
+    ip domain-name safeus.local
+    crypto key generate rsa
+    1024
+    ip ssh version 2
 
-line vty 0 4
- login local
- transport input ssh
+    line console 0
+    password cisco
+    login
 
-interface g0/0/1
- ip address 10.101.2.226 255.255.255.252
- no shutdown
+    line vty 0 4
+    login local
+    transport input ssh
 
-interface g0/0/0
- no shutdown
+    interface g0/0/1
+    ip address 10.101.2.226 255.255.255.252
+    no shutdown
 
-interface g0/0/0.10
- encapsulation dot1Q 10
- ip address 10.101.10.253 255.255.255.0
+    interface g0/0/0
+    no shutdown
 
-interface g0/0/0.20
- encapsulation dot1Q 20
- ip address 10.101.1.253 255.255.255.0
+    interface g0/0/0.10
+    encapsulation dot1Q 10
+    ip address 10.101.10.253 255.255.255.0
 
-interface g0/0/0.100
- encapsulation dot1Q 100
- ip address 10.101.2.125 255.255.255.192
+    interface g0/0/0.20
+    encapsulation dot1Q 20
+    ip address 10.101.1.253 255.255.255.0
 
-interface g0/0/0.200
- encapsulation dot1Q 200
- ip address 10.101.2.61 255.255.255.192
+    interface g0/0/0.100
+    encapsulation dot1Q 100
+    ip address 10.101.2.125 255.255.255.192
 
-ip route 10.101.0.0 255.255.255.0 10.101.2.225
-ip route 10.101.1.0 255.255.255.0 10.101.2.225
-ip route 0.0.0.0 0.0.0.0 10.101.2.225
-```
+    interface g0/0/0.200
+    encapsulation dot1Q 200
+    ip address 10.101.2.61 255.255.255.192
+
+    ip route 10.101.0.0 255.255.255.0 10.101.2.225
+    ip route 10.101.1.0 255.255.255.0 10.101.2.225
+    ip route 0.0.0.0 0.0.0.0 10.101.2.225
+
+</details>
