@@ -33,8 +33,7 @@ username admin secret cisco
 
 ```
 ip domain-name safeus.local
-crypto key generate rsa
- 1024
+crypto key generate rsa 1024
 ip ssh version 2
 ```
 
@@ -49,16 +48,16 @@ ip ssh version 2
 
 ```
 line console 0
- password cisco
- login
+password cisco
+login
 ```
 
 ### VTY Lines (Remote Access)
 
 ```
 line vty 0 4
- login local
- transport input ssh
+login local
+transport input ssh
 ```
 
 - `login local` — Uses the local username/password database (admin/cisco).
@@ -70,13 +69,13 @@ line vty 0 4
 
 ```
 vlan 10
- name DATA
+name DATA
 vlan 20
- name WIRELESS
+name WIRELESS
 vlan 100
- name MGMT
+name MGMT
 vlan 200
- name SERVERS
+name SERVERS
 ```
 
 | VLAN ID | Name | Purpose |
@@ -94,9 +93,9 @@ vlan 200
 
 ```
 interface fa0/1
- switchport mode access
- switchport access vlan 10
- spanning-tree portfast
+switchport mode access
+switchport access vlan 10
+spanning-tree portfast
 ```
 
 | | Value |
@@ -113,8 +112,8 @@ interface fa0/1
 
 ```
 interface g0/1
- switchport mode trunk
- switchport trunk allowed vlan 10,20,100,200
+switchport mode trunk
+switchport trunk allowed vlan 10,20,100,200
 ```
 
 | | Value |
@@ -131,8 +130,8 @@ interface g0/1
 
 ```
 interface vlan 100
- ip address 10.101.2.66 255.255.255.192
- no shutdown
+ip address 10.101.2.66 255.255.255.192
+no shutdown
 ```
 
 | | Value |
