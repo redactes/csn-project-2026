@@ -6,7 +6,6 @@
 3. [Switchconfiguratie – S1 (New York)](#switchconfiguratie-s1-(new-york))
 4. [Switchconfiguratie – S2 (New York)](#switchconfiguratie-s2-(new-york))
 
-
 # Routerconfiguratie – R1 (New York)
 
 ## Inhoudstabel
@@ -123,6 +122,12 @@ Dit document biedt een gestructureerd overzicht van alle ingestelde onderdelen o
 
 # Routerconfiguratie – R2 (New York)
 
+Under construction
+
 # Switchconfiguratie – S1 (New York)
 
+Under construction
+
 # Switchconfiguratie – S2 (New York)
+
+Under construction
