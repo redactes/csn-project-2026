@@ -1,7 +1,21 @@
 # Routerconfiguratie – R1 (New York)
 
-Dit bestand documenteert de configuratie van **R1 – New York**.  
-Alle belangrijke instellingen zijn voorzien van uitleg en structuur.
+## Inhoudstabel
+1. [Basisinstellingen](#basisinstellingen)
+2. [Beveiliging & Authenticatie](#beveiliging--authenticatie)
+3. [SSH Configuratie](#ssh-configuratie)
+4. [Toegangslijnen (Console & VTY)](#toegangslijnen-console--vty)
+5. [Interface Configuratie](#interface-configuratie)
+   - [WAN-interface naar R2](#wan-interface-naar-r2)
+   - [Fysieke LAN-interface](#fysieke-lan-interface)
+   - [VLAN 10 – Netwerk 10.101.0.0/24](#vlan-10--netwerk-10100-024)
+   - [VLAN 20 – Netwerk 10.101.1.0/24](#vlan-20--netwerk-10101-024)
+   - [VLAN 100 – Netwerk 10.101.2.64/26](#vlan-100--netwerk-10102-6426)
+   - [VLAN 200 – Netwerk 10.101.2.0/26](#vlan-200--netwerk-10102-026)
+6. [Statische Routes](#statische-routes)
+   - [Routes naar R2-netwerken](#routes-naar-r2-netwerken)
+   - [Default route (naar R2)](#default-route-naar-r2)
+7. [Einde configuratie](#einde-configuratie)
 
 ---
 
