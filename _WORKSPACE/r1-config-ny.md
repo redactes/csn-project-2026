@@ -168,7 +168,9 @@ ip route 0.0.0.0 0.0.0.0 10.101.2.226
 - The next hop `10.101.2.226` is R2's IP on the WAN link.
 
 ---
-<details><summary>Full Running Configuration</summary>
+
+## Full Running Configuration
+<details><summary>Expand and copy me</summary>
 
     hostname R1
     no ip domain-lookup

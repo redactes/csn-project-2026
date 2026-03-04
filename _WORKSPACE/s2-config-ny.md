@@ -1,23 +1,23 @@
-# S1 – New York Switch Configuration
+# S2 – New York Switch Configuration
 
 ## Overview
 
 | Setting | Value |
 |---|---|
-| **Hostname** | S1 |
+| **Hostname** | S2 |
 | **Location** | New York |
 | **Domain Name** | safeus.local |
 | **SSH Version** | 2 |
 | **RSA Key Size** | 1024 bits |
 | **Management VLAN** | 100 |
-| **Default Gateway** | 10.101.2.126 (R1 VLAN 100) |
+| **Default Gateway** | 10.101.2.125 (R2 VLAN 100) |
 
 ---
 
 ## Basic Setup
 
 ```
-hostname S1
+hostname S2
 no ip domain-lookup
 enable secret cisco
 username admin secret cisco
@@ -33,7 +33,8 @@ username admin secret cisco
 
 ```
 ip domain-name safeus.local
-crypto key generate rsa 1024
+crypto key generate rsa
+ 1024
 ip ssh version 2
 ```
 
@@ -48,16 +49,16 @@ ip ssh version 2
 
 ```
 line console 0
-password cisco
-login
+ password cisco
+ login
 ```
 
 ### VTY Lines (Remote Access)
 
 ```
 line vty 0 4
-login local
-transport input ssh
+ login local
+ transport input ssh
 ```
 
 - `login local` — Uses the local username/password database (admin/cisco).
@@ -69,13 +70,13 @@ transport input ssh
 
 ```
 vlan 10
-name DATA
+ name DATA
 vlan 20
-name WIRELESS
+ name WIRELESS
 vlan 100
-name MGMT
+ name MGMT
 vlan 200
-name SERVERS
+ name SERVERS
 ```
 
 | VLAN ID | Name | Purpose |
@@ -89,13 +90,13 @@ name SERVERS
 
 ## Interfaces
 
-### Fa0/1 — Access Port (PC1)
+### Fa0/1 — Access Port (PC2)
 
 ```
 interface fa0/1
-switchport mode access
-switchport access vlan 10
-spanning-tree portfast
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
 ```
 
 | | Value |
@@ -108,21 +109,21 @@ spanning-tree portfast
 
 ---
 
-### G0/1 — Trunk to R1
+### G0/1 — Trunk to R2
 
 ```
 interface g0/1
-switchport mode trunk
-switchport trunk allowed vlan 10,20,100,200
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,100,200
 ```
 
 | | Value |
 |---|---|
 | **Mode** | Trunk |
 | **Allowed VLANs** | 10, 20, 100, 200 |
-| **Connected to** | R1 G0/0/0 |
+| **Connected to** | R2 G0/0/0 |
 
-- Carries all VLANs to R1 for inter-VLAN routing (Router-on-a-Stick).
+- Carries all VLANs to R2 for inter-VLAN routing (Router-on-a-Stick).
 
 ---
 
@@ -130,13 +131,13 @@ switchport trunk allowed vlan 10,20,100,200
 
 ```
 interface vlan 100
-ip address 10.101.2.65 255.255.255.192
-no shutdown
+ ip address 10.101.2.66 255.255.255.192
+ no shutdown
 ```
 
 | | Value |
 |---|---|
-| **IP Address** | 10.101.2.65 |
+| **IP Address** | 10.101.2.66 |
 | **Subnet Mask** | 255.255.255.192 (/26) |
 | **Subnet** | 10.101.2.64/26 |
 
@@ -145,17 +146,28 @@ no shutdown
 ## Default Gateway
 
 ```
-ip default-gateway 10.101.2.126
+ip default-gateway 10.101.2.125
 ```
 
-- Points to R1's VLAN 100 sub-interface (`10.101.2.126`) for management traffic routing.
+- Points to R2's VLAN 100 sub-interface (`10.101.2.125`) for management traffic routing.
+
+---
+
+## S1 vs S2 Comparison
+
+| | S1 | S2 |
+|---|---|---|
+| **Connected to** | R1 (G0/0/0) | R2 (G0/0/0) |
+| **Management IP** | 10.101.2.65 /26 | 10.101.2.66 /26 |
+| **Default Gateway** | 10.101.2.126 (R1) | 10.101.2.125 (R2) |
+| **Access Port** | Fa0/1 → PC1, VLAN 10 | Fa0/1 → PC2, VLAN 10 |
 
 ---
 
 ## Full Running Configuration
 <details><summary>Expand and copy me</summary>
 
-    hostname S1
+    hostname S2
     no ip domain-lookup
 
     enable secret cisco
@@ -193,9 +205,9 @@ ip default-gateway 10.101.2.126
     switchport trunk allowed vlan 10,20,100,200
 
     interface vlan 100
-    ip address 10.101.2.65 255.255.255.192
+    ip address 10.101.2.66 255.255.255.192
     no shutdown
 
-    ip default-gateway 10.101.2.126
+    ip default-gateway 10.101.2.125
 
 </details>

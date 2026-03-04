@@ -181,8 +181,7 @@ ip route 0.0.0.0 0.0.0.0 10.101.2.225
 ---
 
 ## Full Running Configuration
-
-<details><summary>Full Running Configuration</summary>
+<details><summary>Expand and copy me</summary>
 
     hostname R2
     no ip domain-lookup
