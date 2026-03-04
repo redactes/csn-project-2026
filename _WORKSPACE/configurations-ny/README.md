@@ -5,7 +5,7 @@
 2. [Beveiliging & Authenticatie](#beveiliging--authenticatie)
 3. [SSH Configuratie](#ssh-configuratie)
 4. [Toegangslijnen (Console & VTY)](#toegangslijnen-console--vty)
-5. [Interface Configuratie](#interface-configuratie)
+5. [Interface Configuratie](#-interface-configuratie)
    - [WAN-interface naar R2](#wan-interface-naar-r2)
    - [Fysieke LAN-interface](#fysieke-lan-interface)
    - [VLAN 10 – Netwerk 10.101.0.0/24](#vlan-10--netwerk-10100-024)
