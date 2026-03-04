@@ -3,8 +3,8 @@
 ## Inhoudstabel
 1. [Routerconfiguratie – R1 (New York)](#routerconfiguratie-r1-(new-york))
 2. [Routerconfiguratie – R2 (New York)](#routerconfiguratie-r2-(new-york))
-3. [Switchconfiguratie – S1 (New York)](#routerconfiguratie-r2-(new-york))
-4. [Switchconfiguratie – S2 (New York)](#routerconfiguratie-r2-(new-york))
+3. [Switchconfiguratie – S1 (New York)](#Switchconfiguratie-s1-(new-york))
+4. [Switchconfiguratie – S2 (New York)](#Switchconfiguratie-s2-(new-york))
 
 
 # Routerconfiguratie – R1 (New York)
