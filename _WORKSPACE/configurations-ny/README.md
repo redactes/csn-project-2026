@@ -1,4 +1,4 @@
-# Routerconfiguratie – R1 (New York)
+# Configurations of each network device (US branch)
 
 ## Inhoudstabel
 1. [Routerconfiguratie – R1 (New York)](#routerconfiguratie-r1-(new-york))
