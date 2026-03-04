@@ -1,6 +1,15 @@
 # Routerconfiguratie – R1 (New York)
 
 ## Inhoudstabel
+1. [Routerconfiguratie – R1 (New York)](#routerconfiguratie-r1-(new-york))
+2.
+3.
+4.
+
+
+# Routerconfiguratie – R1 (New York)
+
+## Inhoudstabel
 1. [Basisinstellingen](#basisinstellingen)
 2. [Beveiliging & Authenticatie](#beveiliging--authenticatie)
 3. [SSH Configuratie](#ssh-configuratie)
