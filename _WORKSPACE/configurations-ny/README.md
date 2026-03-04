@@ -2,9 +2,9 @@
 
 ## Inhoudstabel
 1. [Routerconfiguratie – R1 (New York)](#routerconfiguratie-r1-(new-york))
-2.
-3.
-4.
+2. [Routerconfiguratie – R2 (New York)](#routerconfiguratie-r2-(new-york))
+3. [Routerconfiguratie – S1 (New York)](#routerconfiguratie-r2-(new-york))
+4. [Routerconfiguratie – S2 (New York)](#routerconfiguratie-r2-(new-york))
 
 
 # Routerconfiguratie – R1 (New York)
@@ -120,3 +120,9 @@
 ## Einde configuratie
 
 Dit document biedt een gestructureerd overzicht van alle ingestelde onderdelen op router **R1 – New York**, geschikt voor GitHub-documentatie.
+
+# Routerconfiguratie – R2 (New York)
+
+# Routerconfiguratie – S1 (New York)
+
+# Routerconfiguratie – S2 (New York)
