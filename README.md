@@ -36,8 +36,8 @@ The project follows a structured four-phase methodology:
 
 | Module | Description | Status |
 | :--- | :--- | :--- |
-| **Phase 1** | Network Documentation | In Progress |
-| **Phase 2** | LAN with Router-on-a-Stick | Pending |
+| **Phase 1** | Network Documentation | Completed |
+| **Phase 2** | LAN with Router-on-a-Stick | Completed |
 | **Phase 3** | Collapsed Core Network (SafeEU) | Pending |
 | **Phase 4** | Static Routing (LAN & WAN) | Pending |
 | **Phase 5** | Centralized DHCP Solution | Pending |
