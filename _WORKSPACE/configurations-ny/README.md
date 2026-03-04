@@ -3,8 +3,8 @@
 ## Inhoudstabel
 1. [Routerconfiguratie – R1 (New York)](#routerconfiguratie-r1-(new-york))
 2. [Routerconfiguratie – R2 (New York)](#routerconfiguratie-r2-(new-york))
-3. [Routerconfiguratie – S1 (New York)](#routerconfiguratie-r2-(new-york))
-4. [Routerconfiguratie – S2 (New York)](#routerconfiguratie-r2-(new-york))
+3. [Switchconfiguratie – S1 (New York)](#routerconfiguratie-r2-(new-york))
+4. [Switchconfiguratie – S2 (New York)](#routerconfiguratie-r2-(new-york))
 
 
 # Routerconfiguratie – R1 (New York)
@@ -123,6 +123,6 @@ Dit document biedt een gestructureerd overzicht van alle ingestelde onderdelen o
 
 # Routerconfiguratie – R2 (New York)
 
-# Routerconfiguratie – S1 (New York)
+# Switchconfiguratie – S1 (New York)
 
-# Routerconfiguratie – S2 (New York)
+# Switchconfiguratie – S2 (New York)
