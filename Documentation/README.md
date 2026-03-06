@@ -1,3 +1,14 @@
+# Documentation
+
+### Final Report — CSN Network Project
+This document is our full project report, walking through every step we took to design, build, and validate our network from start to finish. From initial setup to final testing, everything is documented here — making it the go-to reference for understanding how the project came together.
+
+### UAT Test Plan — CSN Network Project
+This file contains the User Acceptance Testing (UAT) plan for the CSN network project, documenting all test cases across 7 categories including local connectivity, routing tables, and remote connectivity. Each test case tracks the criteria, expected results, test dates, and pass/fail outcomes — providing full traceability of the network validation process from simulation to final verification.
+
+---
+
+# Configurations
 
 ### How to Use the Configs
 1. Open **Cisco Packet Tracer** and load your topology file.
