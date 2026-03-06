@@ -1,4 +1,4 @@
-# 🖧 Connecting & Securing Networks — CSN 2026
+# 🖧 Connecting & Securing Networks (CSN) Project 2026
 
 > Designing and implementing a redundant, self-healing enterprise network across two sites — built in Cisco Packet Tracer and deployed on real hardware.
 
