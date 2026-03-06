@@ -16,8 +16,6 @@
 
 --- 
 
-test
-
 ## 📄 Documentation
 
 #### Final Report — CSN Network Project [(Browse the docs)](docs)
