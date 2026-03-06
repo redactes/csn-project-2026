@@ -36,6 +36,7 @@ The project follows a structured four-phase methodology:
 
 | Module | Description | Status |
 | :--- | :--- | :--- |
+| [**Project Documentation**](documentation) | Project Documentation | / |
 | **Phase 1** | Network Documentation | Completed |
 | **Phase 2** | LAN with Router-on-a-Stick | Completed |
 | **Phase 3** | Collapsed Core Network (SafeEU) | Pending |
