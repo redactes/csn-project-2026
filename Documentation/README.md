@@ -1,6 +1,6 @@
 # 🖧 CSN Network Project — POD-1
 
-> A school networking project simulating a multi-site enterprise network between New York and Brussels, built and tested in Cisco Packet Tracer.
+> A school networking project simulating a multi-site enterprise network between New York and Brussels. First built and tested in Cisco Packet Tracer, then deployed on real hardware.
 
 ---
 
