@@ -7,6 +7,7 @@
 5. Copy the configuration and paste it into the Packet Tracer CLI.
   > **Note:** When prompted for the RSA key size, enter `1024`.
 
+###### Device Configuration Files
 | Device | Type | Location |
 |---|---|---|
 | R1 – New York | Router | [r1-config-ny.md](configs-ny/r1-config-ny.md) |
