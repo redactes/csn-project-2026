@@ -49,7 +49,7 @@ The project follows a structured four-phase methodology:
 
 | Module | Description | Status |
 |:---|:---|:---|
-| [📄 docs](docs) | Project reports, UAT plans, and reference material | 🟡 In Progress |
+| [docs](docs) | Project reports, UAT plans, and reference material | 🟡 In Progress |
 | [phase-01](phase-01) | Network Documentation | 🟢 Completed |
 | [phase-02](phase-02) | LAN with Router-on-a-Stick | 🟢 Completed |
 | [phase-03](phase-03) | Collapsed Core Network (SafeEU) | 🟡 In Progress |
