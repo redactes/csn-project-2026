@@ -130,10 +130,10 @@ Each device has its own configuration file. Follow the steps below to apply a co
 
 ## 🔌 Physical Topology
 
-<img src="../Phase-01/topologies/Physical_Topology.png" width="100%">
+<img src="../phase-01/topologies/Physical_Topology.png" width="100%">
 
 ---
 
 ## 🔗 Logical Topology
 
-<img src="../Phase-01/topologies/Logical_Topology.png" width="100%">
+<img src="../phase-01/topologies/Logical_Topology.png" width="100%">
