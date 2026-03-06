@@ -8,11 +8,11 @@
 
 - [📄 Documentation](#-documentation)
 - [⚙️ Configurations](#️-configurations)
-    - [🗽 New York](#-new-york-office)
-    - [🇧🇪 Brussels](#-brussels-office)
+    - [New York](#new-york-office)
+    - [Brussels](#brussels-office)
 - [🌐 IP Addressing](#-ip-addressing)
-    - [🗽 New York](#-new-york-office-101010016)
-    - [🇧🇪 Brussels](#-brussels-office-101020016)
+    - [New York](#new-york-office-101010016)
+    - [Brussels](#brussels-office-101020016)
 - [🔌 Physical Topology](#-physical-topology)
 - [🔗 Logical Topology](#-logical-topology)
 
@@ -41,7 +41,7 @@ Each device has its own configuration file. Follow the steps below to apply a co
 
 > **Note:** When prompted for the RSA key size, enter `1024`.
 
-#### 🗽 New York Office
+#### New York Office
 | Device | Type | Config |
 |:---|:---|:---|
 | R1 – New York | Router | [r1-config-ny.md](configs-ny/r1-config-ny.md) |
@@ -52,7 +52,7 @@ Each device has its own configuration file. Follow the steps below to apply a co
 | PC1 – New York | Workstation | — |
 | PC2 – New York | Workstation | — |
 
-#### 🇧🇪 Brussels Office
+#### Brussels Office
 | Device | Type | Config |
 |:---|:---|:---|
 | CS1 – Brussels | Router | — |
@@ -70,7 +70,7 @@ Each device has its own configuration file. Follow the steps below to apply a co
 ## 🌐 IP Addressing
 #### Network IP Plan: POD-1
 
-##### 🗽 New York Office (10.101.0.0/16)
+##### New York Office (10.101.0.0/16)
 | Subnet | Mask | First IP | Last IP | Hosts | Network | Broadcast | VLAN | Name |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | Data | 255.255.255.0 | 10.101.0.1 | 10.101.0.254 | 254 | 10.101.0.0 | 10.101.0.255 | Vlan10 | Data |
@@ -100,7 +100,7 @@ Each device has its own configuration file. Follow the steps below to apply a co
 
 ---
 
-##### 🇧🇪 Brussels Office (10.102.0.0/16)
+##### Brussels Office (10.102.0.0/16)
 | Subnet | Mask | First IP | Last IP | Hosts | Network | Broadcast | VLAN | Name |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | Data | 255.255.255.0 | 10.102.0.1 | 10.102.0.254 | 254 | 10.102.0.0 | 10.102.0.255 | Vlan10 | Data |
