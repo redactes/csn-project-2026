@@ -39,7 +39,7 @@ Each device has its own configuration file. Follow the steps below to apply a co
 
 > **Note:** When prompted for the RSA key size, enter `1024`.
 
-#### New York Office
+#### New York Office [(Browse the docs)](docs)
 | Device | Type | Config |
 |:---|:---|:---|
 | R1 – New York | Router | [r1-config-ny.md](configs-ny/r1-config-ny.md) |
@@ -50,7 +50,7 @@ Each device has its own configuration file. Follow the steps below to apply a co
 | PC1 – New York | Workstation | — |
 | PC2 – New York | Workstation | — |
 
-#### Brussels Office
+#### Brussels Office [(Browse the docs)](docs)
 | Device | Type | Config |
 |:---|:---|:---|
 | CS1 – Brussels | Router | — |
