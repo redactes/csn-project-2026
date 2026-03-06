@@ -49,20 +49,20 @@ The project follows a structured four-phase methodology:
 
 | Module | Description | Status |
 |:---|:---|:---|
-| [📄 Documentation](docs) | Project reports, UAT plans, and reference material | 🟡 In Progress |
-| [Phase-01](Phase-01) | Network Documentation | 🟢 Completed |
-| [Phase-02](Phase-02) | LAN with Router-on-a-Stick | 🟢 Completed |
-| [Phase-03](Phase-03) | Collapsed Core Network (SafeEU) | 🟡 In Progress |
-| [Phase-04](Phase-04) | Static Routing (LAN & WAN) | 🔴 On Hold |
-| [Phase-05](Phase-05) | Centralized DHCP Solution | 🔴 On Hold |
-| [Phase-06](Phase-06) | Single-area OSPF | 🔴 On Hold |
-| [Phase-07](Phase-07) | WAN Implementation | 🔴 On Hold |
-| [Phase-08](Phase-08) | Monitoring, TFTP & Syslog | 🔴 On Hold |
-| [Phase-09](Phase-09) | Firewall Integration | 🔴 On Hold |
-| [Phase-10](Phase-10) | Provider Connectivity with BGP & NAT | 🔴 On Hold |
-| [Phase-11](Phase-11) | Advanced Firewall Security | 🔴 On Hold |
-| [Phase-12](Phase-12) | Site-to-Site VPN | 🔴 On Hold |
-| [Phase-13](Phase-13) | Cloud Connectivity | 🔴 On Hold |
+| [📄 docs](docs) | Project reports, UAT plans, and reference material | 🟡 In Progress |
+| [phase-01](phase-01) | Network Documentation | 🟢 Completed |
+| [phase-02](phase-02) | LAN with Router-on-a-Stick | 🟢 Completed |
+| [phase-03](phase-03) | Collapsed Core Network (SafeEU) | 🟡 In Progress |
+| [phase-04](phase-04) | Static Routing (LAN & WAN) | 🔴 On Hold |
+| [phase-05](phase-05) | Centralized DHCP Solution | 🔴 On Hold |
+| [phase-06](phase-06) | Single-area OSPF | 🔴 On Hold |
+| [phase-07](phase-07) | WAN Implementation | 🔴 On Hold |
+| [phase-08](phase-08) | Monitoring, TFTP & Syslog | 🔴 On Hold |
+| [phase-09](phase-09) | Firewall Integration | 🔴 On Hold |
+| [phase-10](phase-10) | Provider Connectivity with BGP & NAT | 🔴 On Hold |
+| [phase-11](phase-11) | Advanced Firewall Security | 🔴 On Hold |
+| [phase-12](phase-12) | Site-to-Site VPN | 🔴 On Hold |
+| [phase-13](phase-13) | Cloud Connectivity | 🔴 On Hold |
 
 ---
 
