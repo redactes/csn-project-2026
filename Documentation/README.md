@@ -1,8 +1,22 @@
-# 🖧 CSN Network Project — POD-1
+# 🖧 CSN Network Project
 
 > A school networking project simulating a multi-site enterprise network between New York and Brussels. First built and tested in Cisco Packet Tracer, then deployed on real hardware.
 
 ---
+
+## 📑 Table of Contents
+
+- [📄 Documentation](#-documentation)
+- [⚙️ Configurations](#️-configurations)
+    - [🗽 New York](#-new-york-office)
+    - [🇧🇪 Brussels](#-brussels-office)
+- [🌐 IP Addressing](#-ip-addressing)
+    - [🗽 New York](#-new-york-office-101010016)
+    - [🇧🇪 Brussels](#-brussels-office-101020016)
+- [🔌 Physical Topology](#-physical-topology)
+- [🔗 Logical Topology](#-logical-topology)
+
+--
 
 ## 📄 Documentation
 
@@ -56,7 +70,7 @@ Each device has its own configuration file. Follow the steps below to apply a co
 ## 🌐 IP Addressing
 #### Network IP Plan: POD-1
 
-##### 🗽 New York (10.101.0.0/16)
+##### 🗽 New York Office (10.101.0.0/16)
 | Subnet | Mask | First IP | Last IP | Hosts | Network | Broadcast | VLAN | Name |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | Data | 255.255.255.0 | 10.101.0.1 | 10.101.0.254 | 254 | 10.101.0.0 | 10.101.0.255 | Vlan10 | Data |
@@ -86,7 +100,7 @@ Each device has its own configuration file. Follow the steps below to apply a co
 
 ---
 
-##### 🇧🇪 Brussels (10.102.0.0/16)
+##### 🇧🇪 Brussels Office (10.102.0.0/16)
 | Subnet | Mask | First IP | Last IP | Hosts | Network | Broadcast | VLAN | Name |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | Data | 255.255.255.0 | 10.102.0.1 | 10.102.0.254 | 254 | 10.102.0.0 | 10.102.0.255 | Vlan10 | Data |
