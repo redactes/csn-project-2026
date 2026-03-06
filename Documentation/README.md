@@ -1,4 +1,4 @@
-## How to Use the Configs
+#### How to Use the Configs
 
 1. Open **Cisco Packet Tracer** and load your topology file.
 2. Click on the device you want to configure and open the **CLI** tab.
@@ -10,7 +10,7 @@
 
 ---
 
-## Device Configuration Files
+#### Device Configuration Files
 
 | Device | Type | Location |
 |---|---|---|
