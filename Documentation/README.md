@@ -5,7 +5,7 @@
 3. Open the corresponding configuration file from the list below.
 4. Expand the **Full Running Configuration** section at the bottom of the file.
 5. Copy the configuration and paste it into the Packet Tracer CLI.
-> **Note:** When prompted for the RSA key size, enter `1024`.
+  > **Note:** When prompted for the RSA key size, enter `1024`.
 
 | Device | Type | Location |
 |---|---|---|
