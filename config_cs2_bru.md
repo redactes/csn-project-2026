@@ -1,10 +1,9 @@
 enable
 conf t
 
-hostname CORE2
+hostname CS2-BRU
 
 no ip domain-lookup
-ip cef
 ip routing
 
 spanning-tree mode rapid-pvst
@@ -33,13 +32,13 @@ switchport mode trunk
 switchport trunk allowed vlan 10,20,100,200
 
 interface GigabitEthernet1/0/2
-description Uplink-PortChannel
+description Etherchannel
 switchport mode trunk
 switchport trunk allowed vlan 10,20,100,200
 channel-group 1 mode active
 
 interface GigabitEthernet1/0/3
-description Uplink-PortChannel
+description Etherchannel
 switchport mode trunk
 switchport trunk allowed vlan 10,20,100,200
 channel-group 1 mode active

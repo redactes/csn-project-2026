@@ -4,7 +4,6 @@ conf t
 hostname FW_NY
 
 no ip domain-lookup
-ip cef
 
 interface Serial0/1/0
 description TO_R_NY1
@@ -17,7 +16,7 @@ ip address 10.101.6.10 255.255.255.252
 no shutdown
 
 interface Serial0/2/0
-description TO_PROVIDER
+description TO_WAN
 ip address 10.101.6.13 255.255.255.252
 no shutdown
 
@@ -39,7 +38,6 @@ ip route 0.0.0.0 0.0.0.0 10.101.6.14
 
 line con 0
 logging synchronous
-
 
 line vty 0 4
 login

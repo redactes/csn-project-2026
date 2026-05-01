@@ -1,6 +1,6 @@
 enable
 conf t
-hostname ACCESS-SW2
+hostname AS2-BRU
 
 no ip domain-lookup
 
@@ -17,19 +17,19 @@ vlan 200
 name SERVERS
 
 interface FastEthernet0/1
-description USER-PC
+description TO_USER_PC
 switchport mode access
 switchport access vlan 10
 spanning-tree portfast
 spanning-tree bpduguard enable
 
 interface GigabitEthernet0/1
-description Uplink-to-CORE1
+description TO_CS1_BRU
 switchport mode trunk
 switchport trunk allowed vlan 10,20,100,200
 
 interface GigabitEthernet0/2
-description Uplink-to-CORE2
+description TO_CS2_BRU
 switchport mode trunk
 switchport trunk allowed vlan 10,20,100,200
 

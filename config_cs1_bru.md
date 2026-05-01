@@ -1,10 +1,9 @@
 enable
 conf t
 
-hostname CORE1
+hostname CS1-BRU
 
 no ip domain-lookup
-ip cef
 ip routing
 
 spanning-tree mode rapid-pvst
@@ -33,17 +32,16 @@ switchport mode trunk
 switchport trunk allowed vlan 10,20,100,200
 
 interface GigabitEthernet1/0/2
-description Uplink-PortChannel
+description Etherchannel
 switchport mode trunk
 switchport trunk allowed vlan 10,20,100,200
 channel-group 1 mode active
 
 interface GigabitEthernet1/0/3
-description Uplink-PortChannel
+description Etherchannel
 switchport mode trunk
 switchport trunk allowed vlan 10,20,100,200
 channel-group 1 mode active
-
 
 interface Vlan10
 ip address 10.102.0.1 255.255.255.0

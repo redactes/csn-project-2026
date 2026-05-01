@@ -4,22 +4,21 @@ conf t
 hostname FW_BRU
 
 no ip domain-lookup
-ip cef
 
 interface Loopback0
 ip address 10.102.4.1 255.255.255.255
 
 interface GigabitEthernet0/0/0
-description TO_CORE1
+description TO_CS1_BRU
 ip address 10.102.3.5 255.255.255.252
 no shutdown
 
-description TO_CORE2
+description TO_CS2_BRU
 ip address 10.102.3.9 255.255.255.252
 no shutdown
 
 interface Serial0/1/0
-description TO_PROVIDER
+description TO_WAN
 ip address 10.102.3.1 255.255.255.252
 clock rate 2000000
 no shutdown

@@ -1,10 +1,9 @@
 enable
 conf t
 
-hostname R_NY1
+hostname R1_NY
 
 no ip domain-lookup
-ip cef
 
 interface GigabitEthernet0/0/0
 description Trunk-to-SW_NY1
@@ -12,31 +11,31 @@ no ip address
 no shutdown
 
 interface GigabitEthernet0/0/0.10
-description Gateway-VLAN10-Data
+description GW_VLAN10_DATA
 encapsulation dot1Q 10
 ip address 10.101.0.1 255.255.255.0
 ip helper-address 10.102.2.10
 
 interface GigabitEthernet0/0/0.20
-description Gateway-VLAN20-Wireless
+description GW_VLAN20_WIRELESS
 encapsulation dot1Q 20
 ip address 10.101.1.1 255.255.255.0
 ip helper-address 10.102.2.10
 
 interface GigabitEthernet0/0/0.100
-description Gateway-VLAN100-Management
+description GW_VLAN100_MANAGEMENT
 encapsulation dot1Q 100
 ip address 10.101.2.67 255.255.255.192
 ip helper-address 10.102.2.10
 
 interface GigabitEthernet0/0/0.200
-description Gateway-VLAN200-Server
+description GW_VLAN200_SERVER
 encapsulation dot1Q 200
 ip address 10.101.2.1 255.255.255.192
 ip helper-address 10.102.2.10
 
 interface GigabitEthernet0/0/1
-description P2P-to-R_NY2
+description TO_R_NY2
 ip address 10.101.6.1 255.255.255.252
 no shutdown
 

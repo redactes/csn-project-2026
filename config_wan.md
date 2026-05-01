@@ -1,10 +1,9 @@
 enable
 conf t
 
-hostname R_Provider
+hostname R_WAN
 
 no ip domain-lookup
-ip cef
 
 interface Serial0/1/0
 description TO_FW_NY
