@@ -75,6 +75,7 @@ standby 200 priority 100
 standby 200 preempt
 
 router ospf 1
+default-information originate
 router-id 7.7.7.7
 log-adjacency-changes
 passive-interface default

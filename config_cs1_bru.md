@@ -75,6 +75,7 @@ standby 200 priority 110
 standby 200 preempt
 
 router ospf 1
+default-information originate
 router-id 6.6.6.6
 log-adjacency-changes
 passive-interface default
@@ -82,6 +83,8 @@ no passive-interface GigabitEthernet1/0/1
 network 10.102.3.4 0.0.0.3 area 0
 network 10.102.4.2 0.0.0.0 area 0
 network 10.102.0.0 0.0.255.255 area 0
+
+ip route 0.0.0.0 0.0.0.0 10.102.3.5
 
 line con 0
 logging synchronous
