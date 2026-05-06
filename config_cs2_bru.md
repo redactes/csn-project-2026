@@ -29,16 +29,19 @@ no shutdown
 
 interface Port-channel1
 switchport mode trunk
+switchport trunk encapsulation dot1q
 switchport trunk allowed vlan 10,20,100,200
 
 interface GigabitEthernet1/0/2
 description Etherchannel
+switchport trunk encapsulation dot1q
 switchport mode trunk
 switchport trunk allowed vlan 10,20,100,200
 channel-group 1 mode active
 
 interface GigabitEthernet1/0/3
 description Etherchannel
+switchport trunk encapsulation dot1q
 switchport mode trunk
 switchport trunk allowed vlan 10,20,100,200
 channel-group 1 mode active
@@ -86,6 +89,7 @@ line con 0
 logging synchronous
 
 line vty 0 4
+password class
 login
 
 end
