@@ -5,22 +5,21 @@ hostname R_WAN
 
 no ip domain-lookup
 
-interface Serial0/1/0
+interface GigabitEthernet0/0/0
 description TO_FW_NY
 ip address 10.101.6.14 255.255.255.252
 clock rate 2000000
 no shutdown
 
-interface Serial0/1/1
+interface GigabitEthernet0/0/1 
 description TO_FW_BRU
 ip address 10.102.3.2 255.255.255.252
 no shutdown
 
-interface GigabitEthernet0/0/0
+
+interface Serial0/1/0
 shutdown
-interface GigabitEthernet0/0/1
-shutdown
-interface GigabitEthernet0/0/2
+interface Serial0/1/1
 shutdown
 
 router ospf 1
