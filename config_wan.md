@@ -15,7 +15,6 @@ description TO_FW_BRU
 ip address 10.102.3.2 255.255.255.252
 no shutdown
 
-
 interface Serial0/1/0
 shutdown
 interface Serial0/1/1
@@ -31,7 +30,8 @@ line con 0
 logging synchronous
 
 line vty 0 4
-
+password class
+login
 
 end
 write memory
