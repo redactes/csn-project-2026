@@ -8,7 +8,6 @@ no ip domain-lookup
 interface GigabitEthernet0/0/0
 description TO_FW_NY
 ip address 10.101.6.14 255.255.255.252
-clock rate 2000000
 no shutdown
 
 interface GigabitEthernet0/0/1 
