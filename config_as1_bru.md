@@ -1,3 +1,6 @@
+enable
+conf t
+
 hostname AS1-BRU
 
 no ip domain-lookup
@@ -46,8 +49,10 @@ line con 0
 logging synchronous
 
 line vty 0 4
+password class
 login
 line vty 5 15
+password class
 login
 
 end
