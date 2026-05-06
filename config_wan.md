@@ -1,6 +1,6 @@
 enable
 conf t
-
+no logging console
 hostname R_WAN
 
 no ip domain-lookup
@@ -31,7 +31,7 @@ line con 0
 logging synchronous
 
 line vty 0 4
-login
+
 
 end
 write memory
