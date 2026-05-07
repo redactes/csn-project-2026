@@ -18,7 +18,7 @@ vlan 200
 name SERVERS
 
 interface FastEthernet0/1
-description TO_USER_PC
+description VLAN_USERS
 switchport mode access
 switchport access vlan 10
 spanning-tree portfast
