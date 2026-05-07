@@ -4,7 +4,7 @@
 
 ---
 
-![Logical topology](logical_topology[work-in-progress].png)
+![Logical topology](logical_topology.png)
 
 ---
 
