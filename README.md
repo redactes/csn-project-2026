@@ -4,6 +4,10 @@
 
 ---
 
+![Logical topology](logical_topology[work-in-progress].png)
+
+---
+
 ## 👥 Contributors
 * Roy Cannaerts
 * Beau Berghmans
@@ -11,7 +15,5 @@
 * Kenchy Schroyen
 
 ---
-
-![Logical topology](logical_topology[work-in-progress].png)
 
 *CSN Project 2026 — Thomas More Geel*
