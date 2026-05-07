@@ -31,6 +31,13 @@ switchport access vlan 200
 spanning-tree portfast
 spanning-tree bpduguard enable
 
+interface FastEthernet0/3
+description SERVER
+switchport mode access
+switchport access vlan 200
+spanning-tree portfast
+spanning-tree bpduguard enable
+
 interface GigabitEthernet0/1
 description TO_CS1_BRU
 switchport mode trunk
