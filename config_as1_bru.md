@@ -25,14 +25,14 @@ spanning-tree portfast
 spanning-tree bpduguard enable
 
 interface FastEthernet0/2
-description SERVER
+description ZABBIX_SRV
 switchport mode access
 switchport access vlan 200
 spanning-tree portfast
 spanning-tree bpduguard enable
 
 interface FastEthernet0/3
-description SERVER
+description DHCP_SRV
 switchport mode access
 switchport access vlan 200
 spanning-tree portfast
