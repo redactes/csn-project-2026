@@ -4,6 +4,10 @@
 
 ---
 
+![Logical topology](logical_topology[work-in-progress].png)
+
+---
+
 ## 👥 Contributors
 * Roy Cannaerts
 * Beau Berghmans
