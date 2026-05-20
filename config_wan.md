@@ -26,6 +26,13 @@ log-adjacency-changes
 network 10.101.6.12 0.0.0.3 area 0
 network 10.102.3.0 0.0.0.3 area 0
 
+router bgp 65200
+bgp log-neighbor-changes
+neighbor 10.101.6.13 remote-as 65100
+neighbor 10.102.3.1 remote-as 65300
+network 10.101.6.12 mask 255.255.255.252
+network 10.102.3.0 mask 255.255.255.252
+
 line con 0
 logging synchronous
 
