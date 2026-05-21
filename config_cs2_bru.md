@@ -46,6 +46,20 @@ switchport mode trunk
 switchport trunk allowed vlan 10,20,100,200
 channel-group 1 mode active
 
+interface GigabitEthernet1/0/4
+description TO_ACCESS_SWITCH
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,100,200
+no shutdown
+
+interface GigabitEthernet1/0/5
+description TO_ACCESS_SWITCH
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20,100,200
+no shutdown
+
 interface Vlan10
 ip address 10.102.0.2 255.255.255.0
 ip helper-address 10.102.2.10
