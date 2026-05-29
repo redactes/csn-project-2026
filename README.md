@@ -4,7 +4,7 @@
 
 ---
 
-![Logical topology](logical_topology.png)
+![Logical topology](/Documentation/logical_topology.png)
 
 ---
 
