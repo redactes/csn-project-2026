@@ -42,6 +42,7 @@ network 10.101.5.0 mask 255.255.255.128
 network 10.101.6.4 mask 255.255.255.252
 network 10.101.6.8 mask 255.255.255.252
 network 10.101.6.12 mask 255.255.255.252
+network 10.101.6.16 mask 255.255.255.252
 
 line con 0
 logging synchronous
