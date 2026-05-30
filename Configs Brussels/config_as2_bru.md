@@ -16,6 +16,18 @@ name MANAGEMENT
 vlan 200
 name SERVERS
 
+ip domain-name csn.local
+username admin privilege 15 secret class
+crypto key generate rsa modulus 2048
+ip ssh version 2
+
+interface Vlan100
+description MANAGEMENT
+ip address 10.102.2.68 255.255.255.192
+no shutdown
+
+ip default-gateway 10.102.2.126
+
 interface FastEthernet0/1
 description VLAN_USERS
 switchport mode access
@@ -41,11 +53,8 @@ line con 0
 logging synchronous
 
 line vty 0 4
-password class
-login
-line vty 5 15
-password class
-login
+login local
+transport input ssh
 
 end
 write memory

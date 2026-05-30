@@ -39,10 +39,14 @@ network 10.102.3.0 mask 255.255.255.252
 line con 0
 logging synchronous
 
+ip domain-name csn.local
+username admin privilege 15 secret class
+crypto key generate rsa modulus 2048
+ip ssh version 2
+
 line vty 0 4
-password class
-login
-transport input telnet
+login local
+transport input ssh
 
 end
 write memory

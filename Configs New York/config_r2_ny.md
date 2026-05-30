@@ -58,10 +58,14 @@ ip route 0.0.0.0 0.0.0.0 10.101.6.10
 line con 0
 logging synchronous
 
+ip domain-name csn.local
+username admin privilege 15 secret cisco
+crypto key generate rsa modulus 2048
+ip ssh version 2
+
 line vty 0 4
-password cisco
-login
-transport input telnet
+login local
+transport input ssh
 
 end
 write memory
