@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> De configuraties zijn bedoeld voor een school-/labomgeving.
+> Sommige bestanden bevatten labwachtwoorden zoals `cisco` en `class`.
+> Tijdelijke allow-regels op firewalls moeten in een productieomgeving verder verstrengd worden.
+
 # CSN Project 2026
 
 > Connecting & Securing Networks project met twee sites: **New York** en **Brussel**, verbonden via een gesimuleerde WAN-provider en beveiligd met firewalls/VPN.
