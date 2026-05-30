@@ -52,4 +52,46 @@ access-list OUTSIDE_IN extended permit ip 10.101.5.0 255.255.255.128 10.102.2.0 
 access-list OUTSIDE_IN extended permit icmp any any
 access-group OUTSIDE_IN in interface outside
 
+# Add IPsec
+crypto ikev1 policy 10
+authentication pre-share
+encryption aes
+hash sha
+group 2
+lifetime 86400
+
+crypto ikev1 enable outside
+
+tunnel-group 10.101.6.17 type ipsec-l2l
+tunnel-group 10.101.6.17 ipsec-attributes
+ikev1 pre-shared-key Cisco123
+
+access-list VPN_ACL extended permit ip 10.102.0.0 255.255.255.0 10.101.0.0 255.255.255.0
+access-list VPN_ACL extended permit ip 10.102.0.0 255.255.255.0 10.101.1.0 255.255.255.0
+access-list VPN_ACL extended permit ip 10.102.0.0 255.255.255.0 10.101.2.0 255.255.255.128
+access-list VPN_ACL extended permit ip 10.102.0.0 255.255.255.0 10.101.3.0 255.255.255.0
+access-list VPN_ACL extended permit ip 10.102.0.0 255.255.255.0 10.101.4.0 255.255.255.0
+access-list VPN_ACL extended permit ip 10.102.0.0 255.255.255.0 10.101.5.0 255.255.255.128
+
+access-list VPN_ACL extended permit ip 10.102.1.0 255.255.255.0 10.101.0.0 255.255.255.0
+access-list VPN_ACL extended permit ip 10.102.1.0 255.255.255.0 10.101.1.0 255.255.255.0
+access-list VPN_ACL extended permit ip 10.102.1.0 255.255.255.0 10.101.2.0 255.255.255.128
+access-list VPN_ACL extended permit ip 10.102.1.0 255.255.255.0 10.101.3.0 255.255.255.0
+access-list VPN_ACL extended permit ip 10.102.1.0 255.255.255.0 10.101.4.0 255.255.255.0
+access-list VPN_ACL extended permit ip 10.102.1.0 255.255.255.0 10.101.5.0 255.255.255.128
+
+access-list VPN_ACL extended permit ip 10.102.2.0 255.255.255.128 10.101.0.0 255.255.255.0
+access-list VPN_ACL extended permit ip 10.102.2.0 255.255.255.128 10.101.1.0 255.255.255.0
+access-list VPN_ACL extended permit ip 10.102.2.0 255.255.255.128 10.101.2.0 255.255.255.128
+access-list VPN_ACL extended permit ip 10.102.2.0 255.255.255.128 10.101.3.0 255.255.255.0
+access-list VPN_ACL extended permit ip 10.102.2.0 255.255.255.128 10.101.4.0 255.255.255.0
+access-list VPN_ACL extended permit ip 10.102.2.0 255.255.255.128 10.101.5.0 255.255.255.128
+
+crypto ipsec ikev1 transform-set TS esp-aes esp-sha-hmac
+
+crypto map OUTSIDE_MAP 10 match address VPN_ACL
+crypto map OUTSIDE_MAP 10 set peer 10.101.6.17
+crypto map OUTSIDE_MAP 10 set ikev1 transform-set TS
+crypto map OUTSIDE_MAP interface outside
+
 write memory
