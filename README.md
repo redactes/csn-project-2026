@@ -1,7 +1,7 @@
 > [!IMPORTANT]
-> De configuraties zijn bedoeld voor een school-/labomgeving.
-> Sommige bestanden bevatten labwachtwoorden zoals `cisco` en `class`.
-> Tijdelijke allow-regels op firewalls moeten in een productieomgeving verder verstrengd worden.
+> - De configuraties zijn bedoeld voor een school-/labomgeving.
+> - Sommige bestanden bevatten labwachtwoorden zoals `cisco` en `class`.
+> - Tijdelijke allow-regels op firewalls moeten in een productieomgeving verder verstrengd worden.
 
 # CSN Project 2026
 
