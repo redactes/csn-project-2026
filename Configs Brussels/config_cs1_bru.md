@@ -103,9 +103,14 @@ ip route 0.0.0.0 0.0.0.0 10.102.3.5
 line con 0
 logging synchronous
 
+ip domain-name csn.local
+username admin privilege 15 secret class
+crypto key generate rsa modulus 2048
+ip ssh version 2
+
 line vty 0 4
-password class
-login
+login local
+transport input ssh
 
 end
 write memory
