@@ -450,10 +450,6 @@ Current status summary:
 | Site-to-site IPsec VPN | Working |
 | Encrypted inter-site traffic | Working |
 
-## Next Possible Improvements
+## Next Improvements
 
-- Replace broad ICMP troubleshooting rules with subnet-specific ICMP ACLs.
-- Add NAT rules if internet/cloud connectivity is introduced later.
-- Add Azure connectivity documentation once the cloud integration is designed.
-- Export final device configs into the repository.
-- Add screenshots of the final Packet Tracer topology and successful verification outputs.
+- Make more secure
