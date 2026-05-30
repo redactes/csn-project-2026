@@ -36,19 +36,11 @@ switchport access vlan 10
 spanning-tree portfast
 spanning-tree bpduguard enable
 
-interface FastEthernet0/2
-description ZABBIX_SRV
-switchport mode access
-switchport access vlan 200
-spanning-tree portfast
-spanning-tree bpduguard enable
-
-interface FastEthernet0/3
-description DHCP_SRV
-switchport mode access
-switchport access vlan 200
-spanning-tree portfast
-spanning-tree bpduguard enable
+interface FastEthernet 0/2
+description PROXMOX_SERVER
+switchport mode trunk
+switchport trunk allowed vlan 100,200
+spanning-tree portfast trunk
 
 interface GigabitEthernet0/1
 description TO_CS1_BRU
