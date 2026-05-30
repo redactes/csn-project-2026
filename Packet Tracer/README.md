@@ -2,6 +2,8 @@
 
 This repository documents the Packet Tracer implementation of our CSN 2026 network lab. The goal is to simulate a multi-site enterprise network with a New York site, a Brussels site, a WAN/provider layer, dynamic routing, firewall segmentation, DHCP relay, and eventually site-to-site VPN/IPsec.
 
+![Printscreen of Packet Tracer](/packet_tracer.png)
+
 ## Project Goal
 
 The original design used Palo Alto firewalls at both sites. Because Packet Tracer does not provide a Palo Alto firewall and the available ASA firewall does not support BGP in our environment, we replaced each Palo Alto firewall with two devices:
