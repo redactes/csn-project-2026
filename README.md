@@ -198,14 +198,6 @@ De acceptatietesten staan in `Documentation/user-acceptance.xlsx`. Hierin worden
 
 ---
 
-## Aandachtspunten
-
-- De configuraties zijn bedoeld voor een school-/labomgeving.
-- Sommige bestanden bevatten labwachtwoorden zoals `cisco` en `class`.
-- Tijdelijke allow-regels op firewalls moeten in een productieomgeving verder verstrengd worden.
-
----
-
 ## Team
 
 - Roy Cannaerts
